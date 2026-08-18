@@ -184,15 +184,33 @@ export default function Footer() {
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-sans)' }}>
             © {currentYear} Elyon Global Technologies. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="/data/Privacy Policy.pdf" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-sans)' }}>
-              Privacy Policy
-            </a>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
-            <a href="/data/Terms Of Use.pdf" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-sans)' }}>
-              Terms of Use
-            </a>
-          </div>
+       <div className="flex items-center gap-6">
+  <Link
+    to="/privacy-policy"
+    className="text-xs hover:text-white transition-colors"
+    style={{
+      color: 'rgba(255,255,255,0.35)',
+      fontFamily: 'var(--font-sans)',
+    }}
+  >
+    Privacy Policy
+  </Link>
+
+  <span style={{ color: 'rgba(255,255,255,0.15)' }}>
+    |
+  </span>
+
+  <Link
+    to="/terms-of-use"
+    className="text-xs hover:text-white transition-colors"
+    style={{
+      color: 'rgba(255,255,255,0.35)',
+      fontFamily: 'var(--font-sans)',
+    }}
+  >
+    Terms of Use
+  </Link>
+</div>
         </div>
       </div>
     </footer>);
